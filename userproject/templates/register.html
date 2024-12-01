@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url({% static 'gif.gif' %});
+            width:100%;
+        }
+
+        .box {
+            position: relative;
+            width: 500px;
+            height: 650px;
+            background: #1c1c1c;
+            border-radius: 40px;
+            overflow: hidden;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 370px;
+            height: 550px;
+            background: linear-gradient(60deg, transparent, #45f3ff, #45f3ff);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+        }
+
+        .box::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 370px;
+            height: 550px;
+            background: linear-gradient(60deg, transparent, #d9138a, #d9138a);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        form {
+            position: absolute;
+            inset: 2px;
+            background: #28292d;
+            border-radius: 50px 5px;
+            z-index: 10;
+            padding: 30px 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            width: 100%;
+        }
+
+        .title h1 {
+            color: #45f3ff;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        form .input-box {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        form .input-box input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 10px 0;
+            color: white;
+        }
+
+        form .input-box input::placeholder {
+            color: #cdd1d2;
+        }
+
+        form .submit {
+            height: 45px;
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            background: #45f3ff;
+            color: #28292d;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form .submit:hover {
+            background: #d9138a;
+            color: #fff;
+        }
+
+        form .link-text {
+            padding-top: 10px;
+            color: rgb(103, 173, 183);
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        form .link-text a {
+            text-decoration: none;
+            color: rgb(153, 41, 99);
+            font-weight: 700;
+        }
+
+        .label-color {
+            color: #9eb3b5;
+        }
+        /* Default styles for mobile */
+        body {
+            font-size: 14px;
+            margin: 10px;
+        }
+        /* Styles for tablets */
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+                margin: 20px;
+            }
+        }
+
+        /* Styles for laptops and desktops */
+        @media (min-width: 992px) {
+            body {
+                font-size: 18px;
+                margin: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form method="POST" action="/register">
+            {% csrf_token %}
+            <div class="title">
+                <h1>Student Registration</h1>
+            </div>
+            <div class="input-box">
+                <label for="username" class="label-color">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" required autofocus />
+            </div>
+            <div class="input-box">
+                <label for="email" class="label-color">Email</label>
+                <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required />
+            </div>
+            <div class="input-box">
+                <label for="password" class="label-color">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required />
+            </div>
+            <div class="input-box">
+                <label for="password2" class="label-color">Confirm Password</label>
+                <input type="password" id="password2" name="password2" placeholder="Confirm Password" required />
+            </div>
+            <input type="submit" value="Register" class="submit" />
+            <p class="link-text">Already have an existing account? <a href="{%url 'login'%}">Login</a></p>
+            <p class="link-text"><a href="/home1">Home</a></p>
+            <p class="link-text">&copy; Student Management Portal</p>
+        </form>
+    </div>
+</body>
+
+</html>
