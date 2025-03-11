@@ -3,5 +3,5 @@ gunicorn
 six
 mysqlclient
 static
-templates
-home
+
+
