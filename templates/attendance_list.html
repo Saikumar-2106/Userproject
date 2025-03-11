@@ -1,0 +1,65 @@
+<!-- templates/attendance_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance List</title>
+    <style>
+        .body {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+        }
+        .att {
+            color: red;
+            font-size: 40px;
+            height: 5rem;
+            padding-left: 30rem;
+        }
+
+        .hyper {
+            height: 5rem;
+            width: 40rem;
+            margin-left: 35rem;
+            padding: 15px;
+        }
+
+        a {
+            display: inline-flex;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body bgcolor="skyblue">
+    <h1 class="att">Attendance List for {{ request.user.username }}</h1>
+    <center>
+        <table border="1" cellpadding="5" cellspacing="0" height="auto" width="80%">
+            <tr>
+                <th><b>User</b></th>
+                <th><b>Date</b></th>
+                <th><b>Presence</b></th>
+            </tr>
+            {% for attendance in attendances %}
+            <tr>
+                <td align="center">{{ attendance.user.username }}</td>
+                <td align="center">{{ attendance.date }}</td>
+                <td align="center">{{ attendance.present }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    <div class="hyper">
+        <a href="{% url 'home' %}">Back to Home</a>
+    </div>
+</body>
+</html>

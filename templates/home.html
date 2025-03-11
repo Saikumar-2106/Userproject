@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            height: auto;
+            background-color: #ebebf1;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            height: auto;
+        }
+
+        /* Section Heading */
+        .section-heading {
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Boxed Section Styling */
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #f90a0a;
+        }
+
+        .box p, .box a {
+            font-size: 23px;
+            color: #666;
+        }
+
+        .box a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .back a {
+            color: rgb(10, 240, 41);
+            text-decoration: none;
+            font-size: 28px;
+
+        }
+
+        /* Media Queries for responsiveness */
+        @media (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to {{ request.user.username }}</h1>
+</header>
+
+<section class="container">
+    <!-- Attendance Section -->
+    <div class="box" id="attendance">
+        <h2 class="section-heading">Attendance</h2>
+        <p>Your attendance details go here. You have attended 85% of your classes this semester.</p>
+        <a href="{% url 'attendance_list' %}">View full fee history</a>
+
+    </div>
+
+    <!-- Fee Section -->
+    <div class="box" id="fee">
+        <h2 class="section-heading">Fee</h2>
+        <p>Your fee details go here. You have paid $10,000 in tuition fees this year.</p>
+        <a href="fee">View full fee history</a>
+
+    </div>
+
+    <!-- Results Section -->
+    <div class="box" id="results">
+        <h2 class="section-heading">Results</h2>
+        <p>Click <a href="result">here</a>  to check your results go here. Your average grade this semester </p>
+    </div>
+
+    <!-- Personal Details Section -->
+    <div class="box" id="personal-details">
+        <h2 class="section-heading">Personal Details</h2>
+        <p>Click <a href="personal_details">here</a>  to check your information go here.</p>
+        
+    </div>
+    <div class="back">
+        <a href="{% url 'home1' %}">Back to Home</a>
+    </div>
+</section>
+<footer>
+    <p>&copy; 2024 Your Website</p>  
+</footer>
+</body>
+</html>

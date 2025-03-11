@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        section {
+            width: 80%;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        /* Custom Styles */
+
+        /* Default styles for mobile */
+        body {
+            font-size: 14px;
+            margin: 10px;
+        }
+        /* Styles for tablets */
+        @media (min-width: 768px) {
+            body {
+                
+                font-size: 16px;
+                margin: 20px;
+            }
+        }
+
+        /* Styles for laptops and desktops */
+        @media (min-width: 992px) {
+            body {
+                font-size: 18px;
+                margin: 30px;
+            }
+        }
+
+        
+        .about{
+            display:block;
+            border: 1px solid #6b6a6f;
+            border-radius: 10px;
+            background-color: rgb(153, 156, 158);
+        }
+        .about h2{
+            font-size: 30px;
+            text-align: center;
+        }
+        .about p{
+            font-size: 20px;
+            text-align: justify;
+        }
+        .vis{
+            width: 80%;
+            margin: 2rem 6rem;
+            padding: 20px;
+            font-size: 20px;
+            border: 2px solid #2505f6;
+            border-radius: 10px;
+            box-shadow: 2px 4px 2px 4px #2505f6;
+        }
+        .vis {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .vis p{
+            padding-top: 5px;
+        }
+        .mis{
+            width: 80%;
+            margin: 2rem 6rem;
+            padding: 20px;
+            font-size: 20px;
+            border: 2px solid #2505f6;
+            border-radius: 10px;
+            box-shadow: 2px 4px 2px 4px #2505f6;
+        }
+        .mis{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .mis p{
+            padding-top: 5px;
+        }
+        .item {
+            flex: 1 1 100%; /* Full width on mobile */
+        }
+
+        @media (min-width: 768px) {
+            .item {
+                flex: 1 1 48%; /* Half width on tablets */
+            }
+        }
+
+        @media (min-width: 992px) {
+            .item {
+                flex: 1 1 32%; /* Third width on laptops */
+            }
+        }
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body {
+                font-size: 20px;
+            }
+        }
+        .foot{
+            display: inline-flex;
+            padding-left:5rem;
+            padding-top:4rem;
+        }
+        .foot a{
+            text-decoration: none;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <section class="about">
+            <h2>About IT</h2>
+            <p>Department Objective To produce engineering graduates with academic excellence, positive attitude, good communication and technical skills enriched with good character, self confidence and leadership qualities which help them for easy employment in any industry as well as academic pursuance for further higher studies in India or abroad.</p>
+            <div class="vis">
+                <p><b>Our Mission</b>
+                    <br>
+                    M1: Information Technology program dedicates itself to provide students with a set of skills, knowledge and attitude that will permit its graduates to succeed and thrive as successful information technologists.
+                    <br>
+                    M2: Enhance overall personality development which includes innovative thinking, team work, entrepreneur skills, communication skills, employability skills and ethical conduct.
+                    <br>
+                    M3: Ensuring effective teaching–learning process to provide in-depth knowledge of interdisciplinary areas.
+                    <br>
+                    M4: Providing industry interactions through consultancy and sponsored research for the societal needs.
+                </p>
+            </div>
+            <div class="mis">
+                <p> <b> Vision</b>
+                    <br>
+                    Create high-quality engineering professionals through research, innovation and teamwork for Information Technology services with outstanding faculty, facilities and education. </p>
+            </div>
+        </section>
+</div>
+<footer class="foot">
+    <div class="an">
+        <a href="{% url 'home1' %}">Back to Home</a>
+    </div>
+</footer>
+</body>
+</html>

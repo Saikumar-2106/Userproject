@@ -1,0 +1,300 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Autonomous College in AP - Best Engineering College in AP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #6a1b9a;
+            padding: 10px 20px;
+            color: #fff;
+            animation: fadeIn 2s;
+        }
+
+        .header img {
+            height: 80px;
+            width: auto;
+        }
+
+        .he {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .para {
+            font-size: 18px;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .para1 {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #512da8;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffd600;
+        }
+
+        /* Marquee */
+        .marq {
+            background-color: #673ab7;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .marq a {
+            color: #ffd600;
+            text-decoration: none;
+        }
+
+        /* Content Section */
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            color: #6a1b9a;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .gallery img {
+            height: 400px;
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(39, 62, 49, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Vision & Mission */
+        .vission {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .vission h2 {
+            font-size: 36px;
+            color: #512da8;
+        }
+
+        .vis, .mis {
+            background-color: #e0e0e0;
+            border-left: 5px solid #6a1b9a;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            animation: slideIn 1.5s;
+        }
+
+        .vis p, .mis p {
+            font-size: 18px;
+            text-align: left;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #311b92;
+            color: #fff;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .footer h3 {
+            font-size: 20px;
+        }
+        .footer a {
+            color: #ffd600;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            list-style: none;
+            font-size: 18px;
+            color: greenyellow;
+
+        }
+
+        .footer3 p {
+            margin: 5px 0;
+        }
+
+        .footer4 {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .footer4 h2 {
+            font-size: 16px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <img src="https://media.collegedekho.com/media/img/institute/logo/logo3.png" alt="College Logo">
+        <div>
+            <h2 class="he">ADITYA INSTITUTE OF TECHNOLOGY AND MANAGEMENT (Autonomous)</h2>
+            <p class="para">Approved by AICTE-Delhi, Affiliated to JNTUGV-Vizianagaram, Accredited by NBA, NAAC, Recognized by SIRO</p>
+            <p class="para1">Site for <b>INFORMATION TECHNOLOGY Students</b></p>
+        </div>
+    </section>
+
+    <!-- Navbar -->
+    <section class="nav1">
+        <div class="navbar">
+            <a href="register" class="active">Register</a>
+            <a href="login">Faculty & Student Login</a>
+            <a href="About">About IT</a>
+            <a href="Faculty">Faculty</a>
+            <a href="Grievence">Grievance</a>
+            <a href="Syllabus">Syllabus</a>
+        </div>
+        <div class="marq">
+            <marquee class="scrollMsg" onmouseover="this.stop();" onmouseout="this.start();">
+                <img src="http://adityatekkali.edu.in/img/newText.gif" alt="">
+                <a href="#">No latest Information</a>
+            </marquee>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="container">
+        <div class="content">
+            <h2>About IT</h2>
+            <p>Department Objective: To produce engineering graduates with academic excellence, positive attitude, good communication, and technical skills enriched with good character, self-confidence, and leadership qualities. These qualities help them in employment in any industry as well as academic pursuance for further higher studies in India or abroad.</p>
+        </div>
+        <div class="gallery">
+            <figure class="card">
+                <img src="{% static 'it1.jpg' %}" alt="IT Department">
+            </figure>
+        </div>
+    </section>
+
+    <!-- Vision and Mission -->
+    <section class="vission">
+        <h2>Vision & Mission</h2>
+        <div class="vis">
+            <p><b>Our Mission</b>
+                <br>M1: Provide students with skills, knowledge, and attitude for successful careers as information technologists.
+                <br>M2: Foster personality development, innovative thinking, teamwork, communication skills, and employability.
+                <br>M3: Ensure effective teaching-learning processes.
+                <br>M4: Promote industry interactions and research.
+            </p>
+        </div>
+        <div class="mis">
+            <p><b>Vision</b>
+                <br>Create high-quality engineering professionals through research, innovation, and teamwork in IT services.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer1">
+            <h3>Useful Links</h3>
+            <ul>
+                <li type="none"><a href="https://www.adityatekkali.edu.in">Aitam</a></li>
+                <li type="none"><a href="https://aitamsac.in/">Aitam Sac</a></li>
+                <li type="none"><a href="https://cets.apsche.ap.gov.in/APSCHE/APSCHEHome.aspx">APSCHE</a></li>
+            </ul>
+        </div>
+        <div class="footer2">
+            <h3>Quick Links</h3>
+            <ul>
+                <li type="none"><a href="register">Register</a></li>
+                <li type="none"><a href="login"> Login</a></li>
+                <li type="none"><a href="About"> About</a></li>
+            </ul>
+        </div>
+        <div class="footer3">
+            <h3>contact info</h3>
+            <p id="contact-phone">+91 7670964110</p>
+            <p id="contact-email">sanjeevusaikumar1@gmail.com</p>
+            <p id="contact-details">Srikakulam , Andhra Pradesh, India</p>
+        </div>
+        <div class="footer4">
+            <h2 class="credit"><i class="fa-regular fa-copyright"></i>All Copyrights Reserved by 👨‍💻 IT Students....</a></h2>
+        </div>
+    </section>
+</body>
+</html>

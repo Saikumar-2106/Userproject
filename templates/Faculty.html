@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Faculty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width:100%;
+
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        section {
+            width: 90%;
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+        /* Custom Styles */
+
+        /* Default styles for mobile */
+        body {
+            font-size: 14px;
+            margin: 10px;
+        }
+        /* Styles for tablets */
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+                margin: 20px;
+            }
+        }
+
+        /* Styles for laptops and desktops */
+        @media (min-width: 100px) {
+            body {
+                font-size: 18px;
+                margin: 1px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            
+            border-radius: 20px;
+        }
+        .about{
+            display:block;
+            border: 1px solid #6b6a6f;
+            border-radius: 10px;
+        }
+        .about h2{
+            font-size: 30px;
+            text-align: center;
+            color: rgb(247, 7, 7);       
+
+        }
+        .about p{
+            font-size: 20px;
+            text-align: justify; 
+            color: rgb(10, 10, 9);       
+        }
+        .contents2{
+            display:inline-flex;
+            gap: 50px;
+            height: auto;
+        }
+        .box{
+            display:inline-flex;
+            position: relative;
+            padding: 20px;
+            border: 1px solid #3106f034;
+            transition: ease 0.5s;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            margin-left: 30px;
+            
+        }
+        .box img{
+            height: 180px;
+            width:150px;
+        }
+        .box li{
+            list-style-type: none;
+            color: rgb(30, 3, 239);       
+
+        }
+        .contents2 .span{
+            display:contents;
+            font-size: 20px;
+            padding-left: 8rem;
+        }
+
+        .box:hover{
+            box-shadow: 1px 3px 7px 4px rgb(1, 240, 25) ;
+            border: 1px solid transparent;
+        }
+        .item {
+            flex: 1 1 100%; /* Full width on mobile */
+        }
+
+        @media (min-width: 768px) {
+            .item {
+                flex: 1 1 48%; /* Half width on tablets */
+            }
+        }
+
+        @media (min-width: 992px) {
+            .item {
+                flex: 1 1 32%; /* Third width on laptops */
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body {
+                font-size: 20px;
+            }
+        }
+        .foot{
+            display: inline-flex;
+            padding-left:5rem;
+        }
+        .foot p{
+            padding-left: 26rem;
+            color: rgb(248, 4, 4);       
+            
+        }
+        .foot a{
+            text-decoration: none;
+            color: rgb(248, 4, 4);  
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <section class="about">
+            <h2>About IT Faculty</h2>
+            <p>
+                <b>Dr. Ramesh Naidu Balaka, Professor - Head of the Department</b>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Dr. Ramesh Naidu Balaka has been working as Professor in the Department of Information Technology at Aditya Institute of Technology and Management (A), Tekkali, permanently affiliated with Jawaharlal Nehru Technological University - Gurajada, Vizianagaram, Andhra Pradesh, India. He completed M.Tech in Computer Science and Technology from Andhra University, Vishakhapatnam, India. He awarded a Doctor of Philosophy (Ph.D.) in Computer Science and System Engineering from Andhra University, Vishakhapatnam, India. He served almost 20 years of experience in teaching and research. He guided 30 Under Graduate and 5 Post Graduate academic projects. Presently, he is a life member of ISTE, CSI, and ACM. He published 4 Indian Patents in Indian Patent Journal, Govt. of India and granted 1 patent in the year 2024 by Intellectual Property (IP) India, Government of India. He is attended more than forty workshops in various places and also he attended various IEEE conferences with in INDIA and abroad. He also attended one international IEEE conference, Bejing, CHINA. He published around 25 Research papers in various reputed National and International Journals like Springer, Elsevier and other. He also wrote one textbook titled a “Multimodal Biometric Authentication System”. He was sanctioned by a Two-Week FDP on “Machine Learning using Python Programming” in 2021. He Recognized as Research Guide ship in Andhra University, Visakhapatnam, India in the year 2023.
+            </p>
+            <div class="contents2" id="contents_1">
+                <div class="box0">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T02.png">
+                    <ul>
+                        <li><span><b>Dr. B. Venkata Ramana</b></span></li>
+                        <li><span>Prof & Dean(Academics)</li>
+                        <li><span> Date of Joining: 18-03-2005</li>
+                        <li><span> Qualification: Ph.D.</span></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5CSE00T07.png">
+                    <ul>
+                        <li><span><b>Dr. Balaka Ramesh Naidu</b></span></li>
+                        <li><span>Prof & HOD</li>
+                        <li><span> Date of Joining: 08-07-2004</li>
+                        <li><span> Qualification: Ph.D.</span></li>
+                    </ul>
+                </div>
+                <div class="box1">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T01.png">
+                    <ul>
+                        <li><span><b>Dr. G.Nageswara Rao</b></span></li>
+                        <li><span>Professor</li>
+                        <li><span> Date of Joining: 23-12-2003</li>
+                        <li><span> Qualification: Ph.D.</span></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T26.png">
+                    <ul>
+                        <li><span><b>Dr. H.Swapna Rekha</b></span></li>
+                        <li><span>Assistant HOD</li>
+                        <li><span> Date of Joining: 01-08-2020</li>
+                        <li><span> Qualification: Ph.D.</span></li>
+                    </ul>
+                </div>
+                <div class="box2">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T09.png">
+                    <ul>
+                        <li><span><b>Sri Chinta Chandra Sekhar</b></span></li>
+                        <li><span>Assistant HOD</li>
+                        <li><span> Date of Joining: 15-06-2009</li>
+                        <li><span> Qualification: M.Tech</span></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T15.png">
+                    <ul>
+                        <li><span><b>Sri G.Jagadeswara Rao</b></span></li>
+                        <li><span>Assistant Professor</li>
+                        <li><span> Date of Joining:01-06-2012 </li>
+                        <li><span> Qualification: Ph.D.</span></li>
+                    </ul>
+                </div>
+                <div class="box3">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5CSE00T58.png">
+                    <ul>
+                        <li><span><b>Sri V.Ashok Gajapathi Raju</b></span></li>
+                        <li><span>Assistant Professor</li>
+                        <li><span> Date of Joining:02-07-2012 </li>
+                        <li><span> Qualification: M.Tech</span></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T29.png">
+                    <ul>
+                        <li><span><b>Smt Smita Rani Sahu</b></span></li>
+                        <li><span>Assistant Professor</li>
+                        <li><span> Date of Joining:01-11-2011 </li>
+                        <li><span> Qualification: M.Tech(Ph.D)</span></li>
+                    </ul>
+                </div>
+                <div class="box4">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T30.png">
+                    <ul>
+                        <li><span><b>Sri G.V Lakshmi Narayana</b></span></li>
+                        <li><span>Assistant Professor</li>
+                        <li><span> Date of Joining:23-12-2021 </li>
+                        <li><span> Qualification: M.Tech(Ph.D)</span></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <img src="https://adityatekkali.edu.in/Files/images/A5INT00T34.png">
+                    <ul>
+                        <li><span><b>Smt Prasanti Potnuru</b></span></li>
+                        <li><span>Assistant Professor</li>
+                        <li><span> Date of Joining:01-02-2023 </li>
+                        <li><span> Qualification: M.Tech</span></li>
+                    </ul>
+                </div>
+                <div class="box5">
+                    <div class="box">
+                        <img src="https://adityatekkali.edu.in/Files/images/A5INT00T35.png">
+                        <ul>
+                            <li><span><b>Sri D.R.Raj</b></span></li>
+                            <li><span>Assistant Professor</li>
+                            <li><span> Date of Joining:10-04-2023 </li>
+                            <li><span> Qualification: M.Tech</span></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <img src="https://raw.githubusercontent.com/aitamweb/Faculty/main/2023/it/A5INT00T36.png">
+                        <ul>
+                            <li><span><b>Smt. B. Usha Rani</b></span></li>
+                            <li><span>Assistant Professor</li>
+                            <li><span> Date of Joining: 19-06-2023</li>
+                            <li><span> Qualification: M.Tech</span></li>
+                        </ul>
+                    </div>   
+        </section>
+</div>
+<footer class="foot">
+    <div class="an">
+        <a href="{% url 'home1' %}">Back to Home</a>
+    </div>
+    <p >&copy; 2024 our Website</p>
+</footer>
+</body>
+</html>
+

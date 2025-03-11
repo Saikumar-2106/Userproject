@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        .course-overview {
+            background-color: #fafafa; 
+            border-radius: 8px; 
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            font-family: Arial, sans-serif;  
+        }
+
+        .course-overview .heading-title {
+            font-size: 24px; 
+            color: #f90303; 
+            text-align: center;
+            margin-bottom: 10px; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            }
+
+        .course-overview p {
+            font-size: 20px; 
+            color: #05fb0d; 
+            line-height: 1.6; 
+            margin-bottom: 10px; 
+        }
+
+        .course-overview p:last-child {
+            margin-bottom: 0; 
+        }
+        .form-container {
+            margin-left: 23rem;
+            background-color: rgb(235, 235, 10);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            height:auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #msg{
+            color:#4CAF50;
+            margin-top:-10px;
+            display: block;
+        }
+        /* Default styles for mobile */
+        body {
+            font-size: 14px;
+            margin: 10px;
+        }
+        /* Styles for tablets */
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+                margin: 20px;
+            }
+        }
+
+        /* Styles for laptops and desktops */
+        @media (min-width: 992px) {
+            body {
+                font-size: 18px;
+                margin: 30px;
+            }
+        }
+        .foot{
+            display: inline-flex;
+            padding-left:5rem;
+        }
+        .foot a{
+            text-decoration: none;
+            color: rgb(248, 4, 4);
+            font-size: 24px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="course-overview">
+        <h3 class="heading-title">About Grievance Cell</h3>
+        <p>Our organization has a Grievance Redressal Cell / Faculty Feedback to
+            redress the grievances / Faculty Feedback of its students/Faculty
+            regarding academic matters, library, canteen, hostels, and other
+            central services.</p>
+        <p>Students/Faculty may also post their grievances in the Grievance
+            boxes available in the campus & Feedback facility of students and
+            faculty is also available in AICTE web-portal.</p>
+        <div class="form-container">
+            <h2>Grievance Form</h2>
+            <form method="post" name="submit-to-google-sheet">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Enter the subject of your grievance">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Write your grievance here"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby_HbH_5_ZXUyYRegbg6W0EHof9cTFwt3RkTHZiiOrSLVT5C7P1XJ15YqmJ7Mgjijvo/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+<footer class="foot">
+    <div class="an">
+        <a href="{% url 'home1' %}">Back to Home</a>
+    </div>
+</footer>
+</body>
+</html>
