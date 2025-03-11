@@ -16,8 +16,7 @@ from .info import *
 import os
 from django.contrib.messages import constants as messages
 
-port = int(os.environ.get("PORT", 10000))  # Default to 10000
-app.run(host="0.0.0.0", port=port)
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
