@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'Student',                    # Name of your database
         'USER': 'root',                        # Your MySQL username
         'PASSWORD': 'Saikumar@2106',           # Your MySQL password
-        'HOST': '127.0.0.1',                   # Or '127.0.0.1'
+        'HOST': 'userproject-p7dy.onrender.com',  # Or '127.0.0.1'
         'PORT': '3306',                        # Default MySQL port
     }
 }
