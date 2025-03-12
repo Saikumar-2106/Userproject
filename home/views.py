@@ -132,7 +132,9 @@ def registerUser(request):
         )
         email.fail_silently = True
         email.send()
-
+        return redirect('/login')
+    
+    return render(request, "admin_register.html")
         
 def activate(request, uidb64, token):
     try:
